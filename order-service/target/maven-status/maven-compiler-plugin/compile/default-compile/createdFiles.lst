@@ -1,0 +1,4 @@
+com\vodacom\orderservice\config\KafkaTopicConfig.class
+com\vodacom\orderservice\kafka\OrderProducer.class
+com\vodacom\orderservice\controller\OrderController.class
+com\vodacom\orderservice\OrderServiceApplication.class

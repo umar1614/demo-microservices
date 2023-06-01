@@ -1,0 +1,2 @@
+com\vodacom\stockservice\StockServiceApplication.class
+com\vodacom\stockservice\kafka\OrderConsumer.class

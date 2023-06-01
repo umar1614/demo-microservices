@@ -1,0 +1,464 @@
+2023-05-31 16:33:07.307 [main] INFO  c.v.o.OrderServiceApplication 51 --- Starting OrderServiceApplication using Java 19.0.1 with PID 3180 (C:\Users\SK\IdeaProjects\5 Apr - kafka\Microservices with Maven .jar files\kafkamicroservices\order-service\target\classes started by SK in C:\Users\SK\IdeaProjects\5 Apr - kafka\Microservices with Maven .jar files\kafkamicroservices)
+2023-05-31 16:33:07.320 [main] INFO  c.v.o.OrderServiceApplication 632 --- No active profile set, falling back to 1 default profile: "default"
+2023-05-31 16:33:09.587 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 108 --- Tomcat initialized with port(s): 8081 (http)
+2023-05-31 16:33:09.605 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 --- Initializing ProtocolHandler ["http-nio-8081"]
+2023-05-31 16:33:09.607 [main] INFO  o.a.catalina.core.StandardService 173 --- Starting service [Tomcat]
+2023-05-31 16:33:09.608 [main] INFO  o.a.catalina.core.StandardEngine 173 --- Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-31 16:33:09.780 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] 173 --- Initializing Spring embedded WebApplicationContext
+2023-05-31 16:33:09.784 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext 291 --- Root WebApplicationContext: initialization completed in 2311 ms
+2023-05-31 16:33:10.786 [main] INFO  o.a.k.c.admin.AdminClientConfig 376 --- AdminClientConfig values: 
+	bootstrap.servers = [pkc-6ojv2.us-west4.gcp.confluent.cloud:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-05-31 16:33:11.317 [main] INFO  o.a.k.c.s.a.AbstractLogin 61 --- Successfully logged in.
+2023-05-31 16:33:11.543 [main] INFO  o.a.kafka.common.utils.AppInfoParser 119 --- Kafka version: 3.3.2
+2023-05-31 16:33:11.545 [main] INFO  o.a.kafka.common.utils.AppInfoParser 120 --- Kafka commitId: b66af662e61082cb
+2023-05-31 16:33:11.546 [main] INFO  o.a.kafka.common.utils.AppInfoParser 121 --- Kafka startTimeMs: 1685532791540
+2023-05-31 16:33:18.495 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser 83 --- App info kafka.admin.client for adminclient-1 unregistered
+2023-05-31 16:33:18.511 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics 693 --- Metrics scheduler closed
+2023-05-31 16:33:18.511 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics 697 --- Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-31 16:33:18.511 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics 703 --- Metrics reporters closed
+2023-05-31 16:33:18.517 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 --- Starting ProtocolHandler ["http-nio-8081"]
+2023-05-31 16:33:18.534 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 220 --- Tomcat started on port(s): 8081 (http) with context path ''
+2023-05-31 16:33:18.550 [main] INFO  c.v.o.OrderServiceApplication 57 --- Started OrderServiceApplication in 12.155 seconds (process running for 13.553)
+2023-05-31 16:34:54.378 [main] INFO  c.v.o.OrderServiceApplication 51 --- Starting OrderServiceApplication using Java 19.0.1 with PID 7200 (C:\Users\SK\IdeaProjects\5 Apr - kafka\Microservices with Maven .jar files\kafkamicroservices\order-service\target\classes started by SK in C:\Users\SK\IdeaProjects\5 Apr - kafka\Microservices with Maven .jar files\kafkamicroservices)
+2023-05-31 16:34:54.384 [main] INFO  c.v.o.OrderServiceApplication 632 --- No active profile set, falling back to 1 default profile: "default"
+2023-05-31 16:34:56.736 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 108 --- Tomcat initialized with port(s): 8081 (http)
+2023-05-31 16:34:56.754 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 --- Initializing ProtocolHandler ["http-nio-8081"]
+2023-05-31 16:34:56.756 [main] INFO  o.a.catalina.core.StandardService 173 --- Starting service [Tomcat]
+2023-05-31 16:34:56.757 [main] INFO  o.a.catalina.core.StandardEngine 173 --- Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-31 16:34:56.934 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] 173 --- Initializing Spring embedded WebApplicationContext
+2023-05-31 16:34:56.938 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext 291 --- Root WebApplicationContext: initialization completed in 2407 ms
+2023-05-31 16:34:57.900 [main] INFO  o.a.k.c.admin.AdminClientConfig 376 --- AdminClientConfig values: 
+	bootstrap.servers = [pkc-6ojv2.us-west4.gcp.confluent.cloud:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-05-31 16:34:58.253 [main] INFO  o.a.k.c.s.a.AbstractLogin 61 --- Successfully logged in.
+2023-05-31 16:34:58.457 [main] INFO  o.a.kafka.common.utils.AppInfoParser 119 --- Kafka version: 3.3.2
+2023-05-31 16:34:58.462 [main] INFO  o.a.kafka.common.utils.AppInfoParser 120 --- Kafka commitId: b66af662e61082cb
+2023-05-31 16:34:58.463 [main] INFO  o.a.kafka.common.utils.AppInfoParser 121 --- Kafka startTimeMs: 1685532898451
+2023-05-31 16:35:04.322 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser 83 --- App info kafka.admin.client for adminclient-1 unregistered
+2023-05-31 16:35:04.357 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics 693 --- Metrics scheduler closed
+2023-05-31 16:35:04.358 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics 697 --- Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-31 16:35:04.360 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics 703 --- Metrics reporters closed
+2023-05-31 16:35:04.367 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 --- Starting ProtocolHandler ["http-nio-8081"]
+2023-05-31 16:35:04.392 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 220 --- Tomcat started on port(s): 8081 (http) with context path ''
+2023-05-31 16:35:04.422 [main] INFO  c.v.o.OrderServiceApplication 57 --- Started OrderServiceApplication in 10.921 seconds (process running for 12.069)
+2023-05-31 16:35:16.626 [main] INFO  c.v.o.OrderServiceApplication 51 --- Starting OrderServiceApplication using Java 19.0.1 with PID 2384 (C:\Users\SK\IdeaProjects\5 Apr - kafka\Microservices with Maven .jar files\kafkamicroservices\order-service\target\classes started by SK in C:\Users\SK\IdeaProjects\5 Apr - kafka\Microservices with Maven .jar files\kafkamicroservices)
+2023-05-31 16:35:16.641 [main] INFO  c.v.o.OrderServiceApplication 632 --- No active profile set, falling back to 1 default profile: "default"
+2023-05-31 16:35:19.762 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 108 --- Tomcat initialized with port(s): 8081 (http)
+2023-05-31 16:35:19.788 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 --- Initializing ProtocolHandler ["http-nio-8081"]
+2023-05-31 16:35:19.790 [main] INFO  o.a.catalina.core.StandardService 173 --- Starting service [Tomcat]
+2023-05-31 16:35:19.791 [main] INFO  o.a.catalina.core.StandardEngine 173 --- Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-31 16:35:20.015 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] 173 --- Initializing Spring embedded WebApplicationContext
+2023-05-31 16:35:20.026 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext 291 --- Root WebApplicationContext: initialization completed in 3140 ms
+2023-05-31 16:35:21.381 [main] INFO  o.a.k.c.admin.AdminClientConfig 376 --- AdminClientConfig values: 
+	bootstrap.servers = [pkc-6ojv2.us-west4.gcp.confluent.cloud:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-05-31 16:35:21.772 [main] INFO  o.a.k.c.s.a.AbstractLogin 61 --- Successfully logged in.
+2023-05-31 16:35:22.046 [main] INFO  o.a.kafka.common.utils.AppInfoParser 119 --- Kafka version: 3.3.2
+2023-05-31 16:35:22.049 [main] INFO  o.a.kafka.common.utils.AppInfoParser 120 --- Kafka commitId: b66af662e61082cb
+2023-05-31 16:35:22.049 [main] INFO  o.a.kafka.common.utils.AppInfoParser 121 --- Kafka startTimeMs: 1685532922044
+2023-05-31 16:35:27.812 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser 83 --- App info kafka.admin.client for adminclient-1 unregistered
+2023-05-31 16:35:27.824 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics 693 --- Metrics scheduler closed
+2023-05-31 16:35:27.824 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics 697 --- Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-31 16:35:27.824 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics 703 --- Metrics reporters closed
+2023-05-31 16:35:27.835 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 --- Starting ProtocolHandler ["http-nio-8081"]
+2023-05-31 16:35:27.884 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 220 --- Tomcat started on port(s): 8081 (http) with context path ''
+2023-05-31 16:35:27.914 [main] INFO  c.v.o.OrderServiceApplication 57 --- Started OrderServiceApplication in 12.322 seconds (process running for 14.728)
+2023-05-31 16:35:29.729 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] 173 --- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-31 16:35:29.729 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet 532 --- Initializing Servlet 'dispatcherServlet'
+2023-05-31 16:35:29.731 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet 554 --- Completed initialization in 0 ms
+2023-05-31 16:35:29.996 [http-nio-8081-exec-2] INFO  c.v.orderservice.kafka.OrderProducer 28 --- Order event => OrderEvent(message=order status is in pending state, status=PENDING, order=Order(orderId=4cb4a169-a991-4f23-8763-cd3221a9fe1f, name=Book Order, quantity=122, price=2000.0))
+2023-05-31 16:35:30.099 [http-nio-8081-exec-2] INFO  o.a.k.c.producer.ProducerConfig 376 --- ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [pkc-6ojv2.us-west4.gcp.confluent.cloud:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2023-05-31 16:35:30.294 [http-nio-8081-exec-2] INFO  o.a.k.clients.producer.KafkaProducer 602 --- [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-05-31 16:35:30.325 [http-nio-8081-exec-2] INFO  o.a.k.c.s.a.AbstractLogin 61 --- Successfully logged in.
+2023-05-31 16:35:30.371 [http-nio-8081-exec-2] INFO  o.a.kafka.common.utils.AppInfoParser 119 --- Kafka version: 3.3.2
+2023-05-31 16:35:30.372 [http-nio-8081-exec-2] INFO  o.a.kafka.common.utils.AppInfoParser 120 --- Kafka commitId: b66af662e61082cb
+2023-05-31 16:35:30.373 [http-nio-8081-exec-2] INFO  o.a.kafka.common.utils.AppInfoParser 121 --- Kafka startTimeMs: 1685532930369
+2023-05-31 16:35:32.869 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata 402 --- [Producer clientId=producer-1] Resetting the last seen epoch of partition order_topics-0 to 6 since the associated topicId changed from null to Rsi8DdlvTfKJmn9lk9O5nQ
+2023-05-31 16:35:32.872 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata 402 --- [Producer clientId=producer-1] Resetting the last seen epoch of partition order_topics-1 to 4 since the associated topicId changed from null to Rsi8DdlvTfKJmn9lk9O5nQ
+2023-05-31 16:35:32.872 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata 402 --- [Producer clientId=producer-1] Resetting the last seen epoch of partition order_topics-2 to 5 since the associated topicId changed from null to Rsi8DdlvTfKJmn9lk9O5nQ
+2023-05-31 16:35:32.874 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata 287 --- [Producer clientId=producer-1] Cluster ID: lkc-ym0q9p
+2023-05-31 16:35:32.876 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager 440 --- [Producer clientId=producer-1] ProducerId set to 1304018 with epoch 0
+2023-05-31 16:38:26.761 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer 1300 --- [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-05-31 16:38:26.767 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics 693 --- Metrics scheduler closed
+2023-05-31 16:38:26.767 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics 697 --- Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-31 16:38:26.767 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics 703 --- Metrics reporters closed
+2023-05-31 16:38:26.768 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser 83 --- App info kafka.producer for producer-1 unregistered
+2023-05-31 16:39:03.965 [main] INFO  c.v.o.OrderServiceApplication 51 --- Starting OrderServiceApplication using Java 19.0.1 with PID 7856 (C:\Users\SK\IdeaProjects\5 Apr - kafka\Microservices with Maven .jar files\kafkamicroservices\order-service\target\classes started by SK in C:\Users\SK\IdeaProjects\5 Apr - kafka\Microservices with Maven .jar files\kafkamicroservices)
+2023-05-31 16:39:04.019 [main] INFO  c.v.o.OrderServiceApplication 632 --- No active profile set, falling back to 1 default profile: "default"
+2023-05-31 16:39:06.640 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 108 --- Tomcat initialized with port(s): 8081 (http)
+2023-05-31 16:39:06.658 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 --- Initializing ProtocolHandler ["http-nio-8081"]
+2023-05-31 16:39:06.660 [main] INFO  o.a.catalina.core.StandardService 173 --- Starting service [Tomcat]
+2023-05-31 16:39:06.660 [main] INFO  o.a.catalina.core.StandardEngine 173 --- Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-31 16:39:06.853 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] 173 --- Initializing Spring embedded WebApplicationContext
+2023-05-31 16:39:06.858 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext 291 --- Root WebApplicationContext: initialization completed in 2616 ms
+2023-05-31 16:39:08.083 [main] INFO  o.a.k.c.admin.AdminClientConfig 376 --- AdminClientConfig values: 
+	bootstrap.servers = [pkc-6ojv2.us-west4.gcp.confluent.cloud:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-05-31 16:39:12.657 [main] INFO  o.a.k.c.s.a.AbstractLogin 61 --- Successfully logged in.
+2023-05-31 16:39:12.839 [main] INFO  o.a.kafka.common.utils.AppInfoParser 119 --- Kafka version: 3.3.2
+2023-05-31 16:39:12.841 [main] INFO  o.a.kafka.common.utils.AppInfoParser 120 --- Kafka commitId: b66af662e61082cb
+2023-05-31 16:39:12.841 [main] INFO  o.a.kafka.common.utils.AppInfoParser 121 --- Kafka startTimeMs: 1685533152836
+2023-05-31 16:39:20.156 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser 83 --- App info kafka.admin.client for adminclient-1 unregistered
+2023-05-31 16:39:20.174 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics 693 --- Metrics scheduler closed
+2023-05-31 16:39:20.175 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics 697 --- Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-31 16:39:20.176 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics 703 --- Metrics reporters closed
+2023-05-31 16:39:20.182 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 --- Starting ProtocolHandler ["http-nio-8081"]
+2023-05-31 16:39:20.197 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 220 --- Tomcat started on port(s): 8081 (http) with context path ''
+2023-05-31 16:39:20.209 [main] INFO  c.v.o.OrderServiceApplication 57 --- Started OrderServiceApplication in 17.111 seconds (process running for 18.511)
